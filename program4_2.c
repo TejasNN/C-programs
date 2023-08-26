@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																			                                           
+//	Problem statement : Write a program which accept one number from user and check whether that number is greater than 100 or not 
+//																			                                        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+typedef int BOOL;
+
+#define TRUE 1
+#define FALSE 0
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Function name :		ChkGreater
+//	Input :				integer
+//	Output :			Boolean
+// 	Description :		Function to check if the input number is greater or smaller than 100  
+// 	Author :			Tejas Nandakumar Nagvekar
+// 	Date :				04/05/2023
+// 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+BOOL ChkGreater(int iNo)
+{
+	if(iNo > 100)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//	Entry point function													   //
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iValue = 0;
+	BOOL bRet = FALSE;
+	
+	printf("Please enter number : \n");
+	scanf("%d",&iValue);
+	
+	bRet = ChkGreater(iValue);
+	
+	if(bRet == TRUE)
+	{
+		printf("Greater");
+	}
+	else
+	{
+		printf("Smaller");
+	}
+	
+	return 0;
+}
+
+// Time complexity : NA
