@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																			                                           
+//	Problem statement : Write a program which accepts a number from the user and if the number is less than 50 then print
+//						small, if it is greater than 50 and less than 100 then print medium and if greater than 100 then print large.               
+//																			                                        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Function name :		Number
+//	Input :				integer
+//	Output :			void
+// 	Description :		Checks if the input number is greater than 100 or smaller than 50 or between 50-100.  
+// 	Author :			Tejas Nandakumar Nagvekar
+// 	Date :				06/05/2023
+// 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void Number(int iNo)
+{
+	if(iNo < 50)
+	{
+		printf("Small");
+	}
+	else if((50 <= iNo) && (iNo < 100))
+	{
+		printf("Medium");
+	}
+	else
+	{
+		printf("Large");
+	}
+}
+	
+
+/////////////////////////////////////////////////////////////////////////////////
+//	Entry point function													   //
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iValue = 0;
+	
+	printf("Enter number : \n");
+	scanf("%d",&iValue);
+	
+	Number(iValue);
+	
+	return 0;
+}
+
+// Time complexity : NA
+
