@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																			                                           
+//	Problem statement :	Write a program which accept character from user. If a character is small then display its 
+//                      corresponding capital letter and vice versa. In other cases, display as it is.
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Function name :		Display
+//	Input :				character
+//	Output :			void
+// 	Description :		displays corresponding small or capital alphabet for respective input.  
+// 	Author :			Tejas Nandakumar Nagvekar
+// 	Date :				21/05/2023
+// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{	
+	if((ch >= 'a') && (ch <= 'z'))
+	{
+		printf("%c\n",(ch - 32));
+	}
+	else if((ch >= 'A') && (ch <= 'Z'))
+	{
+		printf("%c\n",(ch + 32));
+	}
+	else
+	{
+		printf("%c\n",ch);
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//	Entry point function													   //
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	char cValue = '\0';
+	
+	printf("Enter a character : \n");
+	scanf("%c",&cValue);
+	
+	Display(cValue);
+	
+	return 0;
+}
+
+// Time complexity : NA
